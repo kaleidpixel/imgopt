@@ -71,8 +71,8 @@ foreach ( $inclides as $file ) {
 	copyAll( __DIR__ . DIRECTORY_SEPARATOR . $file, $to );
 }
 
-$iterator = new \RecursiveDirectoryIterator( __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'kaleidpixel' . DIRECTORY_SEPARATOR . 'image-optimizer' . DIRECTORY_SEPARATOR . 'bin', \FileSystemIterator::SKIP_DOTS );
-$iterator = new \RecursiveIteratorIterator( $iterator );
+$iterator = new RecursiveDirectoryIterator( __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'kaleidpixel' . DIRECTORY_SEPARATOR . 'image-optimizer' . DIRECTORY_SEPARATOR . 'bin', FileSystemIterator::SKIP_DOTS );
+$iterator = new RecursiveIteratorIterator( $iterator );
 
 foreach ( $iterator as $info ) {
 	if ( $info->isFile() ) {
@@ -100,5 +100,12 @@ foreach ( $inclides as $file ) {
 	rmdirAll( $to );
 }
 
+if ( PHP_OS === 'WINNT' ) {
+	exec( "certutil -hashfile ./imgopt.phar SHA256 2>&1", $result );
+} else {
+	exec( "shasum -a 256 ./imgopt.phar 2>&1", $result );
+}
+
 echo "$pharFile successfully created" . PHP_EOL;
+echo "SHA256 : " . strtoupper($result[1]) . PHP_EOL;
 exit( 0 );
