@@ -6,6 +6,11 @@ This program is an image optimization tool written in PHP. It optimizes image fi
 - **avif :** An abbreviation for AV1 Image File Format, it is a new image format based on the AV1 video codec. It boasts even better compression efficiency and image quality compared to webp.
 
 ## Installing
+Please prepare the PHP operating environment in advance.
+
+- UNIX-like environment (macOS, Cygwin)
+- PHP 5.6 or later
+
 Download the [imgopt.phar](https://github.com/kaleidpixel/imgopt/releases/download/latest/imgopt.phar) file using wget or curl:
 
 ```shell
