@@ -5,6 +5,14 @@ This program is an image optimization tool written in PHP. It optimizes image fi
 - **webp :** It is an image format developed by Google, which can maintain high-quality images while having a higher compression ratio compared to existing image formats. It is primarily designed for use on the web. 
 - **avif :** An abbreviation for AV1 Image File Format, it is a new image format based on the AV1 video codec. It boasts even better compression efficiency and image quality compared to webp.
 
+## Installing
+Download the [imgopt.phar](https://github.com/kaleidpixel/imgopt/releases/download/latest/imgopt.phar) file using wget or curl:
+
+```shell
+$ curl -OL https://github.com/kaleidpixel/imgopt/releases/download/latest/imgopt.phar
+
+```
+
 ## How to Use
 The usage is quite straightforward. Just run the program by specifying the path to the directory where the images are stored using the option (-p or --path).
 
