@@ -13,18 +13,6 @@ $ curl -OL https://github.com/kaleidpixel/imgopt/releases/download/latest/imgopt
 
 ```
 
-## How to Use
-The usage is quite straightforward. Just run the program by specifying the path to the directory where the images are stored using the option (-p or --path).
-
-```shell
-$ php imgopt.phar -p ./images
-
-```
-```shell
-$ php imgopt.phar -p /Users/username/www/images
-
-```
-
 To use ImgOpt from the command line by typing `imgopt`, make the file executable and move it to somewhere in your PATH. For example:
 
 ```shell
@@ -61,6 +49,26 @@ php "${dir}/imgopt.phar" "$@"
 :: in case DelayedExpansion is on and a path contains ! 
 setlocal DISABLEDELAYEDEXPANSION
 php "%~dp0imgopt.phar" %*
+
+```
+
+Alternatively, you can also install it using Homebrew. If you install via Homebrew, you can skip detailed tasks like renaming and immediately use the `imgopt` command.
+
+```shell
+$ brew tap kaleidpixel/cli
+$ brew install imgopt
+
+```
+
+## How to Use
+The usage is quite straightforward. Just run the program by specifying the path to the directory where the images are stored using the option (-p or --path).
+
+```shell
+$ imgopt -p ./images
+
+```
+```shell
+$ imgopt -p /Users/username/www/images
 
 ```
 
