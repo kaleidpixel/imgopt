@@ -100,12 +100,6 @@ foreach ( $inclides as $file ) {
 	rmdirAll( $to );
 }
 
-if ( PHP_OS === 'WINNT' ) {
-	exec( "certutil -hashfile ./imgopt.phar SHA256 2>&1", $result );
-} else {
-	exec( "shasum -a 256 ./imgopt.phar 2>&1", $result );
-}
-
+var_dump( __DIR__ . DIRECTORY_SEPARATOR . "imgopt.phar");
 echo "$pharFile successfully created" . PHP_EOL;
-echo "SHA256 : " . strtoupper($result[1]) . PHP_EOL;
 exit( 0 );

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66432d992bad9a8e47e0d4de7dd0d821",
+    "content-hash": "0cce91cad5196f38e465a8267d2d401b",
     "packages": [
         {
             "name": "enshrined/svg-sanitize",
@@ -164,16 +164,16 @@
         },
         {
             "name": "kaleidpixel/image-optimizer",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kaleidpixel/image-optimizer.git",
-                "reference": "ccb8ac37472cc07bfa0f2bac50db3ad31a9f4c60"
+                "reference": "a9e890ee2c305fd3d2a78b11795beef261bc2541"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kaleidpixel/image-optimizer/zipball/ccb8ac37472cc07bfa0f2bac50db3ad31a9f4c60",
-                "reference": "ccb8ac37472cc07bfa0f2bac50db3ad31a9f4c60",
+                "url": "https://api.github.com/repos/kaleidpixel/image-optimizer/zipball/a9e890ee2c305fd3d2a78b11795beef261bc2541",
+                "reference": "a9e890ee2c305fd3d2a78b11795beef261bc2541",
                 "shasum": ""
             },
             "require": {
@@ -208,7 +208,7 @@
             ],
             "support": {
                 "issues": "https://github.com/kaleidpixel/image-optimizer/issues",
-                "source": "https://github.com/kaleidpixel/image-optimizer/tree/v0.3.0"
+                "source": "https://github.com/kaleidpixel/image-optimizer/tree/v0.3.1"
             },
             "funding": [
                 {
@@ -216,7 +216,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-07T17:17:17+00:00"
+            "time": "2023-10-08T12:35:35+00:00"
         }
     ],
     "packages-dev": [],
