@@ -80,7 +80,7 @@ foreach ( $iterator as $info ) {
 	}
 }
 
-unset($iterator);
+unset( $iterator );
 
 $phar = new Phar( $pharFile );
 
@@ -100,6 +100,7 @@ foreach ( $inclides as $file ) {
 	rmdirAll( $to );
 }
 
-var_dump( __DIR__ . DIRECTORY_SEPARATOR . "imgopt.phar");
 echo "$pharFile successfully created" . PHP_EOL;
+echo "SHA256 : " . strtoupper( hash_file( 'sha256', realpath( __DIR__ . DIRECTORY_SEPARATOR . "imgopt.phar" ) ) ) . PHP_EOL;
+
 exit( 0 );
