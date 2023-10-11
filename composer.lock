@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0cce91cad5196f38e465a8267d2d401b",
+    "content-hash": "2065fff0c59763499422f96c16fe967e",
     "packages": [
         {
             "name": "enshrined/svg-sanitize",
@@ -164,16 +164,16 @@
         },
         {
             "name": "kaleidpixel/image-optimizer",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kaleidpixel/image-optimizer.git",
-                "reference": "a9e890ee2c305fd3d2a78b11795beef261bc2541"
+                "reference": "8886a84835c90d9b84b3c3cd286b9cf5522ba3cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kaleidpixel/image-optimizer/zipball/a9e890ee2c305fd3d2a78b11795beef261bc2541",
-                "reference": "a9e890ee2c305fd3d2a78b11795beef261bc2541",
+                "url": "https://api.github.com/repos/kaleidpixel/image-optimizer/zipball/8886a84835c90d9b84b3c3cd286b9cf5522ba3cf",
+                "reference": "8886a84835c90d9b84b3c3cd286b9cf5522ba3cf",
                 "shasum": ""
             },
             "require": {
@@ -208,7 +208,7 @@
             ],
             "support": {
                 "issues": "https://github.com/kaleidpixel/image-optimizer/issues",
-                "source": "https://github.com/kaleidpixel/image-optimizer/tree/v0.3.1"
+                "source": "https://github.com/kaleidpixel/image-optimizer/tree/v0.3.2"
             },
             "funding": [
                 {
@@ -216,7 +216,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-08T12:35:35+00:00"
+            "time": "2023-10-11T22:26:36+00:00"
         }
     ],
     "packages-dev": [],
@@ -227,5 +227,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }

@@ -2,7 +2,7 @@
     "name": "kaleidpixel/imgopt",
     "description": "",
     "license": "MIT",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "homepage": "https://github.com/kaleidpixel/imgopt",
     "type": "phar",
     "authors": [
