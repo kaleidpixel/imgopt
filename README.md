@@ -8,7 +8,7 @@ This program is an image optimization tool written in PHP. It optimizes image fi
 ## Installing
 Please prepare the PHP operating environment in advance.
 
-- UNIX-like environment (macOS, Cygwin)
+- UNIX-like environment (macOS, Linux, FreeBSD, Windows)
 - PHP 5.6 or later
 
 Download the [imgopt.phar](https://github.com/kaleidpixel/imgopt/releases/download/latest/imgopt.phar) file using wget or curl:
@@ -18,6 +18,8 @@ $ curl -OL https://github.com/kaleidpixel/imgopt/releases/download/latest/imgopt
 
 ```
 
+### macOS, Linux, FreeBSD
+
 To use ImgOpt from the command line by typing `imgopt`, make the file executable and move it to somewhere in your PATH. For example:
 
 ```shell
@@ -25,6 +27,17 @@ $ chmod +x imgopt.phar
 $ sudo mv imgopt.phar /usr/local/bin/imgopt
 
 ```
+
+Alternatively, you can also install it using Homebrew. If you install via Homebrew, you can skip detailed tasks like renaming and immediately use the `imgopt` command.
+
+```shell
+$ brew tap kaleidpixel/cli
+$ brew install imgopt
+$ brew cleanup imgopt
+
+```
+
+### Windows
 
 To run ImgOpt on a Windows environment using the `imgopt` command, additional steps are required. The imgopt.phar must be executable and placed in a location registered in the environment variable PATH. Furthermore, you'll need to create two new files: imgopt and imgopt.bat.
 
@@ -54,14 +67,6 @@ php "${dir}/imgopt.phar" "$@"
 :: in case DelayedExpansion is on and a path contains ! 
 setlocal DISABLEDELAYEDEXPANSION
 php "%~dp0imgopt.phar" %*
-
-```
-
-Alternatively, you can also install it using Homebrew. If you install via Homebrew, you can skip detailed tasks like renaming and immediately use the `imgopt` command.
-
-```shell
-$ brew tap kaleidpixel/cli
-$ brew install imgopt
 
 ```
 
