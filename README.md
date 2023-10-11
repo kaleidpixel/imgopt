@@ -83,7 +83,7 @@ $ imgopt -p /Users/username/www/images
 ```
 
 ## License
-* Image Optimizer: MIT License
+* Image Optimizer: MIT License  
   https://github.com/kaleidpixel/image-optimizer
 * webp: BSD License  
   https://www.webmproject.org/license/software/
