@@ -1,9 +1,9 @@
 # ImgOpt
-This program is an image optimization tool written in PHP. It optimizes image files within a specified directory and further outputs them in webp and avif formats. As a result, users can obtain optimized images to reduce the load time of web pages.
+This program is an image optimization tool written in PHP. It optimizes image files within a specified directory and further outputs them in WEBP and AVIF formats. As a result, users can obtain optimized images to reduce the load time of web pages.
 
-## webp and avif formats
-- **webp :** It is an image format developed by Google, which can maintain high-quality images while having a higher compression ratio compared to existing image formats. It is primarily designed for use on the web. 
-- **avif :** An abbreviation for AV1 Image File Format, it is a new image format based on the AV1 video codec. It boasts even better compression efficiency and image quality compared to webp.
+## WEBP and AVIF formats
+- **WEBP :** It is an image format developed by Google, which can maintain high-quality images while having a higher compression ratio compared to existing image formats. It is primarily designed for use on the web. 
+- **AVIF :** An abbreviation for AV1 Image File Format, it is a new image format based on the AV1 video codec. It boasts even better compression efficiency and image quality compared to WEBP.
 
 ## Installing
 Please prepare the PHP operating environment in advance.
@@ -85,7 +85,7 @@ $ imgopt -p /Users/username/www/images
 ## License
 * Image Optimizer: MIT License  
   https://github.com/kaleidpixel/image-optimizer
-* webp: BSD License  
+* WEBP: BSD License  
   https://www.webmproject.org/license/software/
 * gifsicle: GPL version 2 License  
   https://github.com/kohler/gifsicle/blob/master/COPYING
