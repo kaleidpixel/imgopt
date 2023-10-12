@@ -101,7 +101,7 @@ jspm_packages/
 *.crt
 *.key
 *.phar
-*.phar.asc
+*.phar.*
 .sass-cache/
 cache/
 vendor/
