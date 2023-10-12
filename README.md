@@ -14,7 +14,7 @@ Please prepare the PHP operating environment in advance.
 Download the [imgopt.phar](https://github.com/kaleidpixel/imgopt/releases/latest/download/imgopt.phar) file using wget or curl:
 
 ```shell
-$ curl -OL https://github.com/kaleidpixel/imgopt/releases/download/latest/imgopt.phar
+$ curl -OL https://github.com/kaleidpixel/imgopt/releases/latest/download/imgopt.phar
 
 ```
 
