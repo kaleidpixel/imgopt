@@ -11,7 +11,7 @@ Please prepare the PHP operating environment in advance.
 - UNIX-like environment (macOS, Linux, FreeBSD, Windows)
 - PHP 5.6 or later
 
-Download the [imgopt.phar](https://github.com/kaleidpixel/imgopt/releases/download/latest/imgopt.phar) file using wget or curl:
+Download the [imgopt.phar](https://github.com/kaleidpixel/imgopt/releases/latest/download/imgopt.phar) file using wget or curl:
 
 ```shell
 $ curl -OL https://github.com/kaleidpixel/imgopt/releases/download/latest/imgopt.phar
