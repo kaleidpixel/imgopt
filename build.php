@@ -1,7 +1,8 @@
 <?php
-$cmdName  = "imgopt";
-$pharFile = $cmdName . '.phar';
-$inclides = [
+$cmdName      = "imgopt";
+$pharFile     = $cmdName . '.phar';
+$pharFilePath = __DIR__ . DIRECTORY_SEPARATOR . $pharFile;
+$inclides     = [
 	'vendor',
 	'LICENSE',
 ];
@@ -101,6 +102,9 @@ foreach ( $inclides as $file ) {
 }
 
 echo "$pharFile successfully created" . PHP_EOL;
-echo "SHA256 : " . strtoupper( hash_file( 'sha256', realpath( __DIR__ . DIRECTORY_SEPARATOR . "imgopt.phar" ) ) ) . PHP_EOL;
+echo "SHA256 : " . strtoupper( hash_file( 'sha256', realpath( $pharFilePath ) ) ) . PHP_EOL;
 
+file_put_contents("$pharFilePath.md5", hash_file( 'md5', realpath( $pharFilePath ) ));
+file_put_contents("$pharFilePath.sha256", hash_file( 'sha256', realpath( $pharFilePath ) ));
+file_put_contents("$pharFilePath.sha512", hash_file( 'sha512', realpath( $pharFilePath ) ));
 exit( 0 );
