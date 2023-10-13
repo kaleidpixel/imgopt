@@ -71,7 +71,7 @@ jobs:
       - name: Trigger Scoop bucket repository action
         run: |
           curl -X POST \
-            -H "Authorization: token ${{ secrets.KALEIDPIXEL_ACTIONS_TOKEN }}" \
+            -H "Authorization: Bearer ${{ secrets.KALEIDPIXEL_ACTIONS_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/kaleidpixel/scoop-bucket/dispatches \
             -d '{"event_type": "trigger-event"}'
