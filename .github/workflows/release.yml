@@ -16,6 +16,7 @@ jobs:
         run: |
           echo "PACKAGE_PHAR_NAME=${{ env.PACKAGE_NAME }}.phar" >> $GITHUB_ENV
           echo "PACKAGE_ZIP_NAME=${{ env.PACKAGE_NAME }}-x64-win.zip" >> $GITHUB_ENV
+          echo "ACTIONS_TOKEN=${{ secrets.KALEIDPIXEL_ACTIONS_TOKEN }}" >> $GITHUB_ENV
 
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -67,3 +68,11 @@ jobs:
             ${{ env.PACKAGE_PHAR_NAME }}.*
             ${{ env.PACKAGE_ZIP_NAME }}
             ${{ env.PACKAGE_ZIP_NAME }}.*
+
+      - name: Trigger Scoop bucket repository action
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.ACTIONS_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/kaleidpixel/scoop-bucket/dispatches \
+            -d '{"event_type": "trigger-event"}'
