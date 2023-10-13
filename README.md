@@ -28,7 +28,7 @@ $ sudo mv imgopt.phar /usr/local/bin/imgopt
 
 ```
 
-Alternatively, you can also install it using Homebrew. If you install via Homebrew, you can skip detailed tasks like renaming and immediately use the `imgopt` command.
+Alternatively, you can also install it using [Homebrew](https://brew.sh/). If you install via Homebrew, you can skip detailed tasks like renaming and immediately use the `imgopt` command.
 
 ```shell
 $ brew tap kaleidpixel/cli
@@ -67,6 +67,14 @@ php "${dir}/imgopt.phar" "$@"
 :: in case DelayedExpansion is on and a path contains ! 
 setlocal DISABLEDELAYEDEXPANSION
 php "%~dp0imgopt.phar" %*
+
+```
+
+Alternatively, you can also install it using [Scoop](https://scoop.sh/).. If you install via Scoop, you can skip detailed tasks and immediately use the imgopt command.
+
+```shell
+$ scoop bucket add kaleidpixel https://github.com/kaleidpixel/scoop-bucket
+$ scoop install imgopt
 
 ```
 
