@@ -111,7 +111,6 @@ foreach ( $inclides as $file ) {
 }
 
 echo "$pharFile successfully created" . PHP_EOL;
-echo "SHA256 : " . strtoupper( hash_file( 'sha256', realpath( $pharFilePath ) ) ) . PHP_EOL;
 
 file_put_contents( "$pharFilePath.md5", hash_file( 'md5', realpath( $pharFilePath ) ) );
 file_put_contents( "$pharFilePath.sha256", hash_file( 'sha256', realpath( $pharFilePath ) ) );
@@ -128,8 +127,6 @@ if ( $zip->open( $zipPath . '.zip', ZipArchive::CREATE | ZipArchive::OVERWRITE )
 	}
 
 	$zip->close();
-
-	echo "SHA256 (.zip) : " . strtoupper( hash_file( 'sha256', realpath( $zipPath . '.zip' ) ) ) . PHP_EOL;
 
 	file_put_contents( "$zipPath.zip.md5", hash_file( 'md5', realpath( $zipPath . '.zip' ) ) );
 	file_put_contents( "$zipPath.zip.sha256", hash_file( 'sha256', realpath( $zipPath . '.zip' ) ) );
