@@ -6,15 +6,24 @@ $inclides     = [
 	'vendor',
 	'LICENSE',
 ];
+$winBinPath   = __DIR__ . DIRECTORY_SEPARATOR . 'bin' . DIRECTORY_SEPARATOR . 'win';
+$zipPath      = __DIR__ . DIRECTORY_SEPARATOR . "$cmdName-x64-win";
+$zipArchive   = [
+	[ $winBinPath . DIRECTORY_SEPARATOR . $cmdName, $cmdName ],
+	[ $winBinPath . DIRECTORY_SEPARATOR . $cmdName . '.bat', $cmdName . '.bat' ],
+	[ $pharFilePath, $pharFile ],
+];
+$zip          = new ZipArchive;
 
 if ( file_exists( $pharFile ) ) {
 	unlink( $pharFile );
 }
+
 if ( file_exists( $pharFile . '.gz' ) ) {
 	unlink( $pharFile . '.gz' );
 }
 
-function rmdirAll( $path ) {
+function rmdirAll( $path ): void {
 	if ( !file_exists( $path ) ) {
 		return;
 	}
@@ -38,7 +47,7 @@ function rmdirAll( $path ) {
 	}
 }
 
-function copyAll( $sourceDirectory, $destinationDirectory ) {
+function copyAll( $sourceDirectory, $destinationDirectory ): void {
 	if ( is_file( $sourceDirectory ) === true ) {
 		copy( $sourceDirectory, $destinationDirectory );
 
@@ -104,7 +113,29 @@ foreach ( $inclides as $file ) {
 echo "$pharFile successfully created" . PHP_EOL;
 echo "SHA256 : " . strtoupper( hash_file( 'sha256', realpath( $pharFilePath ) ) ) . PHP_EOL;
 
-file_put_contents("$pharFilePath.md5", hash_file( 'md5', realpath( $pharFilePath ) ));
-file_put_contents("$pharFilePath.sha256", hash_file( 'sha256', realpath( $pharFilePath ) ));
-file_put_contents("$pharFilePath.sha512", hash_file( 'sha512', realpath( $pharFilePath ) ));
+file_put_contents( "$pharFilePath.md5", hash_file( 'md5', realpath( $pharFilePath ) ) );
+file_put_contents( "$pharFilePath.sha256", hash_file( 'sha256', realpath( $pharFilePath ) ) );
+file_put_contents( "$pharFilePath.sha512", hash_file( 'sha512', realpath( $pharFilePath ) ) );
+
+// Create an archive for Scoop Bucket.
+if ( is_dir( $zipPath ) === false ) {
+	mkdir( $zipPath, 0755 );
+}
+
+if ( $zip->open( $zipPath . '.zip', ZipArchive::CREATE | ZipArchive::OVERWRITE ) === true ) {
+	foreach ( $zipArchive as $val ) {
+		$zip->addFile( $val[0], $val[1] );
+	}
+
+	$zip->close();
+
+	echo "SHA256 (.zip) : " . strtoupper( hash_file( 'sha256', realpath( $zipPath . '.zip' ) ) ) . PHP_EOL;
+
+	file_put_contents( "$zipPath.zip.md5", hash_file( 'md5', realpath( $zipPath . '.zip' ) ) );
+	file_put_contents( "$zipPath.zip.sha256", hash_file( 'sha256', realpath( $zipPath . '.zip' ) ) );
+	file_put_contents( "$zipPath.zip.sha512", hash_file( 'sha512', realpath( $zipPath . '.zip' ) ) );
+} else {
+	print_r( 'Failed to create the zip file.' );
+}
+
 exit( 0 );

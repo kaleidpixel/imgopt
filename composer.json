@@ -1,28 +1,29 @@
 {
-    "name": "kaleidpixel/imgopt",
-    "description": "",
-    "license": "MIT",
-    "version": "0.3.2",
-    "homepage": "https://github.com/kaleidpixel/imgopt",
-    "type": "phar",
-    "authors": [
-        {
-            "name": "k4zuki02h4t4",
-            "email": "7222225+k4zuki02h4t4@users.noreply.github.com",
-            "homepage": "https://www.kaleidpixel.jp",
-            "role": "Developer"
-        }
-    ],
-    "keywords": [
-        "kaleidpixel",
-        "image-optimizer"
-    ],
-    "scripts": {
-        "build": [
-            "php ./build.php"
-        ]
-    },
-    "require": {
-        "kaleidpixel/image-optimizer": "^0.3.0"
+  "name": "kaleidpixel/imgopt",
+  "description": "",
+  "license": "MIT",
+  "version": "0.3.2",
+  "homepage": "https://github.com/kaleidpixel/imgopt",
+  "type": "phar",
+  "authors": [
+    {
+      "name": "k4zuki02h4t4",
+      "email": "7222225+k4zuki02h4t4@users.noreply.github.com",
+      "homepage": "https://www.kaleidpixel.jp",
+      "role": "Developer"
     }
+  ],
+  "keywords": [
+    "kaleidpixel",
+    "image-optimizer"
+  ],
+  "scripts": {
+    "build": [
+      "php ./build.php"
+    ]
+  },
+  "require": {
+    "kaleidpixel/image-optimizer": "^0.3.0",
+    "ext-zip": "*"
+  }
 }
