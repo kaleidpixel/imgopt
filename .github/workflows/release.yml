@@ -75,3 +75,11 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/kaleidpixel/scoop-bucket/dispatches \
             -d '{"event_type": "trigger-event"}'
+
+      - name: Trigger Homebrew Formula repository action
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.KALEIDPIXEL_ACTIONS_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/kaleidpixel/homebrew-cli/dispatches \
+            -d '{"event_type": "trigger-event"}'
